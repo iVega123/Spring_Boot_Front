@@ -1,13 +1,13 @@
 import { MedicoDetailsComponent } from '../details-medico/details-medico.component';
 import { CommonModule } from "@angular/common";
 import { Observable } from "rxjs";
-import { MedicoService } from "../medico.service";
-import { Medico } from "../medico";
+import { MedicoService } from "../core/services/medico.service";
+import { Medico } from "../core/models/medico";
 import { Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http'
 import { environment } from 'src/environments/environment';
-import { SecurityService } from '../security.service';
+import { SecurityService } from '../core/services/security.service';
 @Component({
   selector: "app-medico-list",
   templateUrl: "./medico-list.component.html",

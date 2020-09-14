@@ -9,7 +9,7 @@ import { MedicoDetailsComponent } from './details-medico/details-medico.componen
 import { MedicoListComponent } from './medico-list/medico-list.component';
 import { UpdateMedicoComponent } from './update-medico/update-medico.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {AuthHeaderInterceptor} from "./auth.header.interceptor";
+import {AuthHeaderInterceptor} from "./core/interceptors/auth.header.interceptor";
 import { LoginComponent } from './login/login.component';
 import { CallbackComponent } from './callback/callback.component';
 

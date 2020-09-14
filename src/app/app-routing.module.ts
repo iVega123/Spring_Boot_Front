@@ -6,7 +6,7 @@ import { MedicoListComponent } from './medico-list/medico-list.component';
 import { UpdateMedicoComponent } from './update-medico/update-medico.component';
 import { NbSidebarModule, NbLayoutModule, NbButtonModule } from '@nebular/theme';
 import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './auth/auth.guard';
 import { CallbackComponent } from './callback/callback.component';
 
 const routes: Routes = [

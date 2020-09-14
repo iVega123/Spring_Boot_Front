@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Medico } from '../medico';
+import { Medico } from '../core/models/medico';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MedicoService } from '../medico.service';
+import { MedicoService } from '../core/services/medico.service';
 
 @Component({
   selector: 'app-update-medico',

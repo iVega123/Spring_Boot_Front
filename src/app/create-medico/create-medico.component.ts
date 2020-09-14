@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MedicoService } from '../medico.service';
-import { Medico } from '../medico';
+import { MedicoService } from '../core/services/medico.service';
+import { Medico } from '../core/models/medico';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,7 +17,7 @@ export class CreateMedicoComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    
+
   }
 
   newMedico(): void {
@@ -31,13 +31,13 @@ export class CreateMedicoComponent implements OnInit {
       console.log(data)
       this.medico = new Medico();
       this.gotoList();
-    }, 
+    },
     error => console.log(error));
   }
 
   onSubmit() {
     this.submitted = true;
-    this.save();    
+    this.save();
   }
 
   gotoList() {

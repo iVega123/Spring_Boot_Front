@@ -1,6 +1,6 @@
-import { Medico } from '../medico';
+import { Medico } from '../core/models/medico';
 import { Component, OnInit, Input } from '@angular/core';
-import { MedicoService } from '../medico.service';
+import { MedicoService } from '../core/services/medico.service';
 import { MedicoListComponent } from '../medico-list/medico-list.component';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -21,7 +21,7 @@ export class MedicoDetailsComponent implements OnInit {
     this.medico = new Medico();
 
     this.id = this.route.snapshot.params['id'];
-    
+
     this.employeeService.getMedico(this.id)
       .subscribe(data => {
         console.log(data)
