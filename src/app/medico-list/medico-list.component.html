@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Medico List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medico of medicos | async">
+            <td>{{medico.nome}}</td>
+            <td>{{medico.email}}</td>
+            <td>{{medico.senha}}</td>
+            <td><button (click)="deleteMedico(medico.id)" class="btn btn-danger">Delete</button>
+                <button (click)="medicoDetails(medico.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
