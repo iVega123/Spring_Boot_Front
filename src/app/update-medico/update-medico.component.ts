@@ -42,6 +42,6 @@ export class UpdateMedicoComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/update']);
+    this.router.navigate(['/medicos']);
   }
 }

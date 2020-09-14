@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Consulta List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Medico</th>
+          <th>Cliente</th>
+          <th>Hora da Consulta</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let consulta of consultas | async">
+          <td>{{consulta.medico.nome}}</td>
+          <td>{{consulta.cliente.nome}}</td>
+          <td>{{consulta.dia_marcado}}</td>
+          <td>{{consulta.status}}</td>
+          <td><button (click)="deleteConsulta(consulta.id)" class="btn btn-danger">Delete</button>
+              <button (click)="consultaDetails(consulta.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

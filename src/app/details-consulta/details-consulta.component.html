@@ -1,0 +1,19 @@
+<h2>Consulta Details</h2>
+
+<hr/>
+<div *ngIf="consulta">
+  <div>
+    <label><b>Cliente: </b></label> {{consulta.cliente.nome}}
+  </div>
+  <div>
+    <label><b>Medico: </b></label> {{consulta.medico.nome}}
+  </div>
+  <div>
+    <label><b>Hora: </b>{{consulta.diaMarcado}}</label>
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Consulta List</button><br>
+
